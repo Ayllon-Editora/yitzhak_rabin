@@ -1,3 +1,5 @@
+
+
 \AtBeginDocument{%
 \begingroup\pagestyle{empty}\raggedright\parindent0pt
 \titulagemfront{}
@@ -12,7 +14,7 @@
 \linha{organização©}{\copyrightorganizacao}
 \linha{prefácio©}{\copyrightintroducao}
 \linhalayout{coordenação da coleção}{Daniel Douek, Michel Gherman e Rafael Kruchin}
-\linhalayout{título original}{\emph{Yitzhak Rabin: soldier, leader, statesman} (2017)}
+\linhalayout{título original}{\textit{Yitzhak Rabin: soldier, leader, statesman} (2017)}
 %\linhalayout{preparação}{Jorge Sallum}
 \linha{ilustração©}{\copyrightilustracao}\smallskip
 \linha{título original}{\titulooriginal}
@@ -54,18 +56,34 @@ Foi feito o depósito legal.\\\endgroup
 \pagebreak\raggedright
 %% Front ---------------------------------------------------------
 % Titulo
+% \titulagem
+
+% {\Formular\Large \textbf{\autor} \par\vspace{1.5ex}}
+% \ifdef{\organizador}{{\small {\organizador} (\textit{organização})} \par}{}
+% \ifdef{\introdutor}{{\small {\introdutor} (\textit{prefácio})} \par}{}
+% \ifdef{\tradutor}{{\small {\tradutor} (\textit{tradução})}\par}{}\vspace{1.5cm}
+
+% {{\footnotesize{} \ifdef{\numeroedicao}{\numeroedicao}{1}ª edição} \par}
+
+% %logos
+% \vfill
+% \ifdef{\logo}{\IfFileExists{\logo}{\hfill\includegraphics[width=3cm]{./logo.png}\hfill\logoum{}\\ São Paulo\quad2020}}{\includegraphics[width=3cm]{./logo.png}\break{} São Paulo\quad2020}
+
 \titulagem
+\bigskip
+{\Formular\bfseries\Large \autor \par\vspace{2.5em}}
+% \ifdef{\organizador}{{\small {\organizador} (\textit{organização})} \par}{}
+\newfontfamily\minion{Minion Pro}
+              %{\fontsize{30}{40}\selectfont \minion
+\ifdef\selectfont\minion{\tradutor}{{\small {\tradutor} (\textit{tradução})} \par}{}
+\ifdef{\prefacio}{{\small {\prefacio} (\textit{prefácio})}\par}{}\vspace{3.5em}
 
-{\Formular\Large \textbf{\autor} \par\vspace{1.5ex}}
-\ifdef{\organizador}{{\small {\organizador} (\textit{organização})} \par}{}
-\ifdef{\introdutor}{{\small {\introdutor} (\textit{prefácio})} \par}{}
-\ifdef{\tradutor}{{\small {\tradutor} (\textit{tradução})}\par}{}\vspace{1.5cm}
-
-{{\footnotesize{} \ifdef{\numeroedicao}{\numeroedicao}{1}ª edição} \par}
+{{\small{} \ifdef{\numeroedicao}{\numeroedicao}{1}ª edição} \par}
 
 %logos
 \vfill
-\ifdef{\logo}{\IfFileExists{\logo}{\hfill\includegraphics[width=3cm]{./logo.png}\hfill\logoum{}\\ São Paulo\quad2020}}{\includegraphics[width=3cm]{./logo.png}\break{} São Paulo\quad2020}
+\ifdef{\logo}{\IfFileExists{\logo}{\hfill\includegraphics[width=2.5cm]{./logo.png}\hfill\logoum{}\\ São Paulo\quad2021}}{\includegraphics[width=2.5cm]{./logo.png}\\\smallskip São Paulo\quad2021}
+
 %\includegraphics[width=.4\textwidth,trim=0 0 25 0]{logo.jpg}\\\smallskip
 \par\clearpage\endgroup
 % Resumo -------------------------------------------------------
